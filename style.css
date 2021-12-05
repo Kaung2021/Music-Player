@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=M+PLUS+1+Code&family=M+PLUS+1:wght@300;400&family=Montagu+Slab&family=Open+Sans&family=Poppins:wght@300&family=Raleway:wght@300&family=Roboto+Slab&family=Roboto:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+body {
+    background-color: rgb(11, 29, 44);
+}
+
+html {
+    font-size: 13px;
+}
+
+
+/*Style to container*/
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.box {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Style to the whole box*/
+
+.music {
+    position: relative;
+    width: 25rem;
+    padding: 20px;
+    overflow: hidden;
+}
+
+
+/*Style to Heading*/
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.heading i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/*Style to details*/
+
+.details {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.details img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.details .title {
+    color: whitesmoke;
+    margin: 1rem 0 0 0;
+    font-size: 1.2rem;
+    /*new*/
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, .5);
+    /* Clip Background Image */
+    background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Animate Background Image */
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+    /* Activate hardware acceleration for smoother animations */
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.details .artist {
+    color: rgb(98, 174, 236);
+    margin-bottom: 1rem;
+}
+
+
+/*Style to VOlume buttons*/
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.buttons>* {
+    width: 70px;
+    height: 70px;
+    background: none;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    margin: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.play:hover {
+    background-color: rgb(85, 160, 221);
+}
+
+.play {
+    background-color: rgb(31, 102, 160);
+}
+
+.play:active {
+    background-color: darkred;
+    animation-name: spining;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#music {
+    animation: spining 6s linear infinite;
+}
+
+@-webkit-keyframes spining {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+
+/*Style about autoPlay*/
+
+.playAuto {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(31, 102, 160);
+    color: whitesmoke;
+}
+
+
+/*Style to controls*/
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls>div {
+    color: whitesmoke;
+}
+
+
+/*
+.duration_slider input[type="range"] {
+    margin: 12px;
+    width: 100%;
+    -webkit-appearance: none;
+    background-color: #4471ef;
+    outline: none;
+}
+
+.duration_slider input {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 2px;
+    background-color: #4471ef;
+    outline: none;
+}
+
+.duration_slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border: 2px solid #4471ef;
+    border-radius: 50%;
+    outline: none;
+}*/
+
+.duration_slider input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    outline: none;
+    background: #4471ef;
+}
+
+.duration_slider input {
+    width: 200px;
+    height: 2px;
+    -webkit-appearance: none;
+    outline: none;
+    background: #4471ef;
+}
+
+.duration_slider input[type="range"]::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #4471ef;
+    border-radius: 50%;
+}
+
+
+/*Style to Volume parts*/
+
+.volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 1rem 0;
+}
+
+.volumeShow {
+    color: whitesmoke;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+#volumeIcon {
+    cursor: pointer;
+}
+
+.volume i {
+    color: whitesmoke;
+    font-size: 1.2rem;
+    margin: 2rem;
+}
+
+
+/*Style to Volume SLider*/
+
+.volume input[type="range"] {
+    margin: 12px;
+    width: 100%;
+    -webkit-appearance: none;
+    outline: none;
+    background: #4471ef;
+}
+
+.volume input {
+    width: 200px;
+    height: 2px;
+    -webkit-appearance: none;
+    outline: none;
+    background: #4471ef;
+}
+
+.volume input[type="range"]::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #4471ef;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+/*Style to Playlist*/
+
+.playlist {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: whitesmoke;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    transform: translate(-100%);
+    transition: all 0.5s ease-in-out;
+}
+
+.playlist-Heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.fa-times {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.fa-music {
+    font-size: 1.5rem;
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.song-index {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.single-song {
+    font-size: 1.2rem;
+    margin: 5px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/1935d064dd.js" crossorigin="anonymous"></script>
+
+<body>
+    <!--Create a Music Player byMySelf-->
+    <div class="container box">
+        <div class="music">
+            <div class="musicPlayer">
+                <div class="heading">
+                    <i class="fas fa-music" id="music"></i>
+                    <h1>Now Playing</h1>
+                    <i class="fas fa-bars" id="bars"></i>
+                </div>
+            </div>
+            <div class="details">
+                <div class="image"><img src="./Image1.jpg" alt="" class="trackImage"></div>
+                <div class="title">
+                    Title
+                </div>
+                <div class="artist">aritst</div>
+                <button class="playAuto">AUTOPLAY<i class="fas fa-sync alt"></i></button>
+                <div class="controls">
+
+                    <div class="songTime">00.00</div>
+                    <div class="durationTime">04.05</div>
+                </div>
+                <div class="duration_slider">
+                    <input type="range" class="slider" min="0" max="100" value="0">
+                </div>
+                <!--Buttons-->
+                <div class="buttons">
+                    <button class="prev"><i class="fas fa-step-backward"></i></button>
+                    <button class="play"><i class="fas fa-play"></i></button>
+                    <button class="next"><i class="fas fa-step-forward"></i></button>
+                </div>
+                <!--VOlume-->
+                <div class="volume">
+                    <div class="volumeShow">0%</div>
+                    <i class="fas fa-volume-mute" id="volumeIcon"></i>
+                    <input type="range" class="volumeslider" min="0" max="100" value="0" id="volumeSlider">
+                </div>
+            </div>
+            <div class="playlist">
+                <!--Playlist Heading-->
+                <div class="playlist-Heading">
+                    <i class="fas fa-music" id="music"></i>
+                    <h1>Playlist</h1>
+                    <i class="fas fa-times" id="close"></i>
+                </div>
+                <!--contents-->
+                <div class="playlist-div">
+                    <!--<div class="playlist-item">
+                        <span class="song-index">1</span>
+                        <p class="single-song">Item - 1</p>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Adding Javasciprt-->
+    <script src="feature.js"></script>
+</body>
+
+</html>
